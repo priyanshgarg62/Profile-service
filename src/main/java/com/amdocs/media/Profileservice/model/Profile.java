@@ -11,7 +11,7 @@ public class Profile {
 
 	@Id
 	@Column(name = "username", nullable = false)
-	public String username;
+	public String userName;
 
 	@Column(name = "address")
 	public String address;
@@ -20,11 +20,11 @@ public class Profile {
 	public long phonenumber;
 
 	public String getUsername() {
-		return username;
+		return userName;
 	}
 
 	public void setUsername(String username) {
-		this.username = username;
+		this.userName = username;
 	}
 
 	public String getAddress() {
@@ -45,7 +45,7 @@ public class Profile {
 
 	@Override
 	public String toString() {
-		return "Profile [username=" + username + ", address=" + address + ", phonenumber=" + phonenumber + "]";
+		return "Profile [username=" + userName + ", address=" + address + ", phonenumber=" + phonenumber + "]";
 	}
 
 }
