@@ -32,7 +32,7 @@ public class EventListener {
 		System.out.println(userDAO.getTopic());
 
 		Profile userprofile = new Profile();
-		userprofile.setUsername(userDAO.getUserName());
+		userprofile.setUserName(userDAO.getUserName());
 		userprofile.setAddress(userDAO.getAddress());
 		userprofile.setPhonenumber(userDAO.getPhonenumber());
 
