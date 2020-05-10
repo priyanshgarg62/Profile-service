@@ -24,7 +24,7 @@ public class ProfileService {
 		logger.info("UserName Password inside Post {}", userDAO);
 
 		Profile profile = new Profile();
-		profile.setUsername(userDAO.getUsername());
+		profile.setUserName(userDAO.getUserName());
 		profile.setAddress(userDAO.getAddress());
 		profile.setPhonenumber(userDAO.getPhonenumber());
 		try {
@@ -38,7 +38,7 @@ public class ProfileService {
 	}
 
 	public void updateProfile(Profile userDAO) {
-		Profile profile = profileRepository.findById(userDAO.getUsername()).get();
+		Profile profile = profileRepository.findById(userDAO.getUserName()).get();
 
 		profile.setAddress(userDAO.getAddress());
 		profile.setPhonenumber(userDAO.getPhonenumber());
@@ -55,7 +55,7 @@ public class ProfileService {
 	}
 	
 	public void deleteProfile(Profile userDAO) {
-		profileRepository.deleteById(userDAO.getUsername());
+		profileRepository.deleteById(userDAO.getUserName());
 		System.out.println("inside delete method");
 	}
 
